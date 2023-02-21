@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResourceBar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public Slider slider;
+    public Gradient gradient;
+    public Image fill;
+
+    public void SetValue(float val)
     {
-        
+        if (val < 0)
+        {
+            val = 0;
+        }
+
+        slider.value = val;
+        fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetMaxValue(float val)
     {
-        
+        slider.maxValue = val;
+        slider.value = val;
+        fill.color = gradient.Evaluate(1f);
     }
 }

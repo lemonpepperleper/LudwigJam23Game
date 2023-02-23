@@ -8,6 +8,7 @@ public class PlayerStateMachine : StateMachine
     public PlayerRunState runState;
     public PlayerAttackState attackState;
     public PlayerDashState dashState;
+    public PlayerDanceState danceState;
 
     public Rigidbody2D body;
     public Animator animator;
@@ -26,6 +27,7 @@ public class PlayerStateMachine : StateMachine
         runState = new PlayerRunState(this);
         attackState = new PlayerAttackState(this);
         dashState = new PlayerDashState(this);
+        danceState = new PlayerDanceState(this);
 
     }
 

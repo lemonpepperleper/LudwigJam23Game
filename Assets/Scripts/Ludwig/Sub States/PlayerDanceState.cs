@@ -1,17 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewMonoBehaviour : MonoBehaviour
+public class PlayerDanceState : PlayerAbilityState
 {
-    // Use this for initialization
-    void Start()
-    {
 
+    protected Vector2 direction;
+
+    public PlayerDanceState(StateMachine stateMachine) : base("Luddy", stateMachine)
+    {
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnEnter()
+    {
+        base.OnEnter();
+
+        playerSM.animator.Play("Luddy");
+        playerSM.body.velocity = Vector2.zero;
+    }
+
+    public override void OnExit()
+    {
+    }
+
+    public override void OnFixedUpdate()
     {
 
+        abilityManager.RefillManaBar();
+    }
+
+    public override void OnUpdate()
+    {
+        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+
+        base.OnUpdate();
+        if (Input.GetKeyDown(KeyCode.C) || direction.sqrMagnitude != 0)
+        {
+            abilityFinished = true;
+        }
     }
 }

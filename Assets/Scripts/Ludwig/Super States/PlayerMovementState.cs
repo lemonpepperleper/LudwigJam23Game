@@ -48,6 +48,11 @@ public class PlayerMovementState : BaseState
         {
             stateMachine.SwitchState(playerSM.dashState);
         }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            stateMachine.SwitchState(playerSM.danceState);
+        }
     }
 
 }

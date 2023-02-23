@@ -10,11 +10,13 @@ public class HurtBox : MonoBehaviour, IDamageResponder
     public Color color;
 
     public float maxHP;
+    public float currentHP;
 
     // Start is called before the first frame update
     void Start()
     {
         HpBar.SetMaxValue(maxHP);
+        currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -25,7 +27,8 @@ public class HurtBox : MonoBehaviour, IDamageResponder
 
     public void TakeDamage(float damage)
     {
-        HpBar.SetValue(HpBar.slider.value - damage);
+        currentHP = currentHP - damage >= 0 ? currentHP - damage : 0;
+        HpBar.SetValue(currentHP);
     }
 
     private void OnDrawGizmos()

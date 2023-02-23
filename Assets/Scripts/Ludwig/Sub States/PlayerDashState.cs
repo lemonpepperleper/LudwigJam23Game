@@ -38,7 +38,6 @@ public class PlayerDashState : PlayerAbilityState
         {
             currentDashTime -= Time.deltaTime;
             playerSM.body.velocity += playerSM.lastMove * playerData.dashSpeed;
-            Debug.Log(playerSM.lastMove);
             //PlayerCombat.invincible = true;
         }
     }

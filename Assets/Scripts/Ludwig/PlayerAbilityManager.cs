@@ -27,7 +27,7 @@ public class PlayerAbilityManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RefillManaBar();
+       manaBar.SetValue(currentMana);
     }
 
     public void SpendMana(float cost)
@@ -36,7 +36,7 @@ public class PlayerAbilityManager : MonoBehaviour
 
     }
 
-    private void RefillManaBar()
+    public void RefillManaBar()
     {
         if (currentMana < playerData.maxMana)
         {
@@ -48,7 +48,7 @@ public class PlayerAbilityManager : MonoBehaviour
             }
         }
 
-        manaBar.SetValue(currentMana);
+        //manaBar.SetValue(currentMana);
     }
 
     public IEnumerator DashCooldown()

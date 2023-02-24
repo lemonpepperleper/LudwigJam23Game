@@ -110,17 +110,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
-        height: 80
+        width: 128
+        height: 128
       alignment: 9
-      pivot: {x: 0.47, y: 0.24}
+      pivot: {x: 0.48, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fa4ebc1710544c36ab03e4fef676af4
-      internalID: 1182769346
+      spriteID: 57c699376f9b7430c9222bb4644003d8
+      internalID: -256075811
       vertices: []
       indices: 
       edges: []
@@ -129,19 +129,19 @@ TextureImporter:
       name: CootsPhD-Idle_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 128
         y: 0
-        width: 80
-        height: 80
+        width: 128
+        height: 128
       alignment: 9
-      pivot: {x: 0.47, y: 0.24}
+      pivot: {x: 0.48, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d410f891e122747e2b3b4dfbdd51ef9b
-      internalID: -883688264
+      spriteID: 044169df527e94f39822c13a3ad23555
+      internalID: -84391509
       vertices: []
       indices: 
       edges: []
@@ -150,19 +150,19 @@ TextureImporter:
       name: CootsPhD-Idle_2
       rect:
         serializedVersion: 2
-        x: 160
+        x: 256
         y: 0
-        width: 80
-        height: 80
+        width: 128
+        height: 128
       alignment: 9
-      pivot: {x: 0.47, y: 0.24}
+      pivot: {x: 0.48, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fef130f01c72e486b8e10c5b789d4878
-      internalID: -1211995206
+      spriteID: 0c6ecff6117aa491ca7069f8dc3aed65
+      internalID: 1114000048
       vertices: []
       indices: 
       edges: []
@@ -171,19 +171,19 @@ TextureImporter:
       name: CootsPhD-Idle_3
       rect:
         serializedVersion: 2
-        x: 240
+        x: 384
         y: 0
-        width: 80
-        height: 80
+        width: 128
+        height: 128
       alignment: 9
-      pivot: {x: 0.47, y: 0.24}
+      pivot: {x: 0.48, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08618916ed5eb46dab6c19eecd181a19
-      internalID: -2082195056
+      spriteID: a9c298670a26b462691f2194f4fcf97d
+      internalID: -1910084381
       vertices: []
       indices: 
       edges: []
@@ -192,19 +192,19 @@ TextureImporter:
       name: CootsPhD-Idle_4
       rect:
         serializedVersion: 2
-        x: 320
+        x: 512
         y: 0
-        width: 80
-        height: 80
+        width: 128
+        height: 128
       alignment: 9
-      pivot: {x: 0.47, y: 0.24}
+      pivot: {x: 0.48, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92b5394dead6c413da2b87aa0880d81c
-      internalID: -186446550
+      spriteID: 8ea8a1f468f854a4382ceb10652a3ab4
+      internalID: 873917223
       vertices: []
       indices: 
       edges: []
@@ -213,19 +213,19 @@ TextureImporter:
       name: CootsPhD-Idle_5
       rect:
         serializedVersion: 2
-        x: 400
+        x: 640
         y: 0
-        width: 80
-        height: 80
+        width: 128
+        height: 128
       alignment: 9
-      pivot: {x: 0.47, y: 0.24}
+      pivot: {x: 0.48, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64bc504d5901943edb4a09d520c22121
-      internalID: 441831416
+      spriteID: 2e2477f17f9d548ecab0a7c7de67cc81
+      internalID: 543266092
       vertices: []
       indices: 
       edges: []
@@ -241,12 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CootsPhD-Idle_4: -186446550
-      CootsPhD-Idle_1: -883688264
-      CootsPhD-Idle_0: 1182769346
-      CootsPhD-Idle_5: 441831416
-      CootsPhD-Idle_2: -1211995206
-      CootsPhD-Idle_3: -2082195056
+      CootsPhD-Idle_4: 873917223
+      CootsPhD-Idle_1: -84391509
+      CootsPhD-Idle_0: -256075811
+      CootsPhD-Idle_5: 543266092
+      CootsPhD-Idle_2: 1114000048
+      CootsPhD-Idle_3: -1910084381
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

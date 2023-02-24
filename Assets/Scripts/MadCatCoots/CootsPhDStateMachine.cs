@@ -6,6 +6,8 @@ public class CootsPhDStateMachine : StateMachine
 {
     public CootsPhDIdleState idleState;
     public CootsPhDRunState runState;
+    public CootsPhDThrowState throwState;
+    public CootsPhDTransitionState transitionState;
 
     public Rigidbody2D body;
     public Animator animator;
@@ -13,7 +15,8 @@ public class CootsPhDStateMachine : StateMachine
     public HurtBox hurtBox;
 
     public Transform player;
-    private bool isFlipped;
+    public GameObject bottlePrefab;
+    public GlobalEvent global;
 
     public CootsData cootsData;
 
@@ -21,6 +24,8 @@ public class CootsPhDStateMachine : StateMachine
     {
         idleState = new CootsPhDIdleState(this);
         runState = new CootsPhDRunState(this);
+        throwState = new CootsPhDThrowState(this);
+        transitionState = new CootsPhDTransitionState(this);
     }
 
 
@@ -31,16 +36,13 @@ public class CootsPhDStateMachine : StateMachine
 
     public void FacePlayer(Transform player)
     {
-
-        if (transform.position.x >= player.position.x && isFlipped)
+        if (transform.position.x >= player.position.x)
         {
             transform.localScale = new Vector3(1, 1, 1);
-            isFlipped = false;
         }
-        else if (transform.position.x < player.position.x && !isFlipped)
+        else if (transform.position.x < player.position.x)
         {
             transform.localScale = new Vector3(-1, 1, 1);
-            isFlipped = true;
         }
     }
 }

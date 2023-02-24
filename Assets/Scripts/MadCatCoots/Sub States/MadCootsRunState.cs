@@ -11,6 +11,7 @@ public class MadCootsRunState : MadCootsMovementState
 
     public override void OnEnter()
     {
+        base.OnEnter();
         cootsSM.animator.Play("Walk");
     }
 

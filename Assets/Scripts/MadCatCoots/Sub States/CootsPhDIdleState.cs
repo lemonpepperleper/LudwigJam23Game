@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CootsPhDIdleState : CootsPhDMovementState
 {
+    protected float lastHP;
     public CootsPhDIdleState(StateMachine stateMachine) : base("Idle", stateMachine)
     {
         
@@ -13,6 +14,7 @@ public class CootsPhDIdleState : CootsPhDMovementState
     {
         cootsSM.animator.Play("Idle");
         cootsSM.body.velocity = Vector2.zero;
+        lastHP = cootsSM.hurtBox.currentHP;
     }
 
     public override void OnExit()
@@ -21,14 +23,13 @@ public class CootsPhDIdleState : CootsPhDMovementState
 
     public override void OnFixedUpdate()
     {
-        base.OnFixedUpdate();
+        cootsSM.FacePlayer(cootsSM.player);
     }
 
     public override void OnUpdate()
     {
         base.OnUpdate();
-
-        if (distance < cootsSM.cootsData.runRange)
+        if (cootsSM.hurtBox.currentHP < lastHP)
         {
             stateMachine.SwitchState(cootsSM.runState);
         }

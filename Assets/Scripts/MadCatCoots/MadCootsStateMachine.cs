@@ -19,10 +19,10 @@ public class MadCootsStateMachine : StateMachine
     public CootsAbilityManager abilityManager;
 
     public Transform player;
-    private bool isFlipped;
 
     public CootsData cootsData;
 
+    private bool isFlipped;
     private void Awake()
     {
         idleState = new MadCootsIdleState(this);
@@ -47,12 +47,12 @@ public class MadCootsStateMachine : StateMachine
 
         if (transform.position.x >= player.position.x && isFlipped)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.Rotate(0f, 180f, 0f);
             isFlipped = false;
         }
         else if (transform.position.x < player.position.x && !isFlipped)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
     }

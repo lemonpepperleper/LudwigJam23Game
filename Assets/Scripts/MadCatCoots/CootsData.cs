@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Coots", menuName = "ScriptableObjects/Coots")]
 public class CootsData : ScriptableObject
 {
+    public float abilityLock = 1.5f;
 
     [Header("Run settings")]
     public float moveSpeed = 3f;

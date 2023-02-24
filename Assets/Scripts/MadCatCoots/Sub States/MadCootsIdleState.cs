@@ -11,8 +11,11 @@ public class MadCootsIdleState : MadCootsMovementState
 
     public override void OnEnter()
     {
+        base.OnEnter();
         cootsSM.animator.Play("Idle");
         cootsSM.body.velocity = Vector2.zero;
+        abilityManager.isLocked = true;
+        abilityManager.StartCoroutine(abilityManager.AbilityLockCoolDown());
     }
 
     public override void OnExit()

@@ -28,9 +28,14 @@ public class CootsPhDRunState : CootsPhDMovementState
 
     public override void OnFixedUpdate()
     {
-        base.OnFixedUpdate();
-
-        target = new Vector2(x, y);
+        if (x >= cootsSM.body.position.x)
+        {
+            cootsSM.transform.localScale = new Vector3(-1, 1, 1);
+        } else
+        {
+            cootsSM.transform.localScale = new Vector3(1, 1, 1);
+        }
+        
         Vector2 newPos = Vector2.MoveTowards(cootsSM.body.position, target, cootsSM.cootsData.sprintSpeed * Time.fixedDeltaTime);
         cootsSM.body.MovePosition(newPos);
     }
@@ -39,9 +44,11 @@ public class CootsPhDRunState : CootsPhDMovementState
     {
         base.OnUpdate();
 
+        target = new Vector2(x, y);
+
         if (cootsSM.body.position == target)
         {
-            stateMachine.SwitchState(cootsSM.idleState);
+            stateMachine.SwitchState(cootsSM.throwState);
         }
     }
 }

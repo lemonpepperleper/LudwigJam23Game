@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e8d52925268144fc4ba8f68040a5e44c
+guid: be9818aa7324d4330b880bcbc9155a26
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 0
   spriteMeshType: 1
-  alignment: 0
+  alignment: 9
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CootsPhD-Run_0
+      name: CootsPhD-Throw_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ece87693c6a2f43289a6b2419f9b869b
-      internalID: -1811664965
+      spriteID: aab9b0c2e2d944c47a80220d575e9618
+      internalID: 309859466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CootsPhD-Run_1
+      name: CootsPhD-Throw_1
       rect:
         serializedVersion: 2
         x: 128
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61c165bc8adf24f7cba70ce137c73977
-      internalID: -1107778327
+      spriteID: 2b7bf067bb3be4ae9a0d8696ea23aff0
+      internalID: -798606230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CootsPhD-Run_2
+      name: CootsPhD-Throw_2
       rect:
         serializedVersion: 2
         x: 256
@@ -161,29 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e581de4e9bfd490fa06911350fecdb2
-      internalID: -981815067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CootsPhD-Run_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.48, y: 0.34}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e31431fc44944b0f8bc4cc521601397
-      internalID: 1369266797
+      spriteID: cc928c3bccce74981975dcb676f16ce8
+      internalID: 852169002
       vertices: []
       indices: 
       edges: []
@@ -199,10 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CootsPhD-Run_3: 1369266797
-      CootsPhD-Run_0: -1811664965
-      CootsPhD-Run_1: -1107778327
-      CootsPhD-Run_2: -981815067
+      CootsPhD-Throw_0: 309859466
+      CootsPhD-Throw_1: -798606230
+      CootsPhD-Throw_2: 852169002
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

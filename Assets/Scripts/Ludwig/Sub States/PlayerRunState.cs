@@ -44,12 +44,12 @@ public class PlayerRunState : PlayerMovementState
     {
         if (!isFlipped && direction.x < 0)
         {
-            playerSM.transform.localScale = new Vector3(-1, 1, 1);
+            playerSM.transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
         else if (isFlipped && direction.x > 0)
         {
-            playerSM.transform.localScale = new Vector3(1, 1, 1);
+            playerSM.transform.Rotate(0f, 180f, 0f);
             isFlipped = false;
         }
     }

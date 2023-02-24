@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93de53279a93a4682ba7568815fd7940, type: 3}
   m_Name: Coots
   m_EditorClassIdentifier: 
+  abilityLock: 1
   moveSpeed: 2.5
   runRange: 1
+  sprintSpeed: 10
   swipeTriggerRange: 3
-  swipeCoolDown: 4
+  swipeCoolDown: 3
   swipeDmg: 10
   punchTriggerRange: 9
   punchCoolDown: 7
@@ -34,3 +36,4 @@ MonoBehaviour:
   stompCoolDown: 15
   numOfRocks: 5
   rockDmg: 10
+  hpThreshold: 50

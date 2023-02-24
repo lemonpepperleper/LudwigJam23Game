@@ -6,6 +6,8 @@ public class CootsAbilityManager : MonoBehaviour
 {
     public CootsData coots;
 
+    public bool isLocked;
+
     public bool isSwipeOffCd;
 
     public bool isPunchOffCd;
@@ -46,6 +48,11 @@ public class CootsAbilityManager : MonoBehaviour
         
     }
 
+    public IEnumerator AbilityLockCoolDown()
+    {
+        yield return new WaitForSeconds(coots.abilityLock);
+        isLocked = false;
+    }
 
     public IEnumerator SwipeCoolDown()
     {

@@ -10,6 +10,8 @@ public class GlobalEvent : MonoBehaviour
     public GameObject coots;
     public GameObject cootshpBar;
 
+    public GameObject cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,6 @@ public class GlobalEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            MadCatTransition();
-        } 
     }
 
     public void MadCatTransition()
@@ -33,4 +31,13 @@ public class GlobalEvent : MonoBehaviour
         madCathpBar.SetActive(true);
     }
 
+    public void TurnOnCootsCam()
+    {
+        cam.SetActive(true);
+    }
+
+    public void TurnOffCootsCam()
+    {
+        cam.SetActive(false);
+    }
 }

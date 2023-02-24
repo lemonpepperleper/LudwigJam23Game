@@ -30,7 +30,7 @@ public class CootsPhDMovementState : BaseState
 
     public override void OnFixedUpdate()
     {
-        cootsSM.FacePlayer(cootsSM.player);
+       
     }
 
     public override void OnUpdate()
@@ -39,7 +39,9 @@ public class CootsPhDMovementState : BaseState
 
         if (hurtBox.currentHP <= 0)
         {
-
+            cootsSM.body.position = new Vector2(7.37f, -3.7f);
+            cootsSM.global.TurnOnCootsCam();
+            stateMachine.SwitchState(cootsSM.transitionState);
         }
 
     }

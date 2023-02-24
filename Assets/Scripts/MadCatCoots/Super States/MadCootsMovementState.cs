@@ -35,30 +35,34 @@ public class MadCootsMovementState : BaseState
     {
         distance = Vector2.Distance(cootsSM.player.position, cootsSM.body.position);
 
-        if (abilityManager.isTornadoOffCd)
+        if (!abilityManager.isLocked)
         {
-            stateMachine.SwitchState(cootsSM.tornadoStartState);
+            if (abilityManager.isTornadoOffCd)
+            {
+                stateMachine.SwitchState(cootsSM.tornadoStartState);
+            }
+
+            //if (abilityManager.isStompOffCd)
+            //{
+            //    stateMachine.SwitchState(cootsSM.stompState);
+            //}
+
+            else if (abilityManager.isRoarOffCd && distance <= coots.roarTriggerRange)
+            {
+                stateMachine.SwitchState(cootsSM.roarState);
+            }
+
+            else if (abilityManager.isPunchOffCd)
+            {
+                stateMachine.SwitchState(cootsSM.punchState);
+            }
+
+            else if (abilityManager.isSwipeOffCd && distance <= coots.swipeTriggerRange)
+            {
+                stateMachine.SwitchState(cootsSM.swipeState);
+            }
         }
 
-        //if (abilityManager.isStompOffCd)
-        //{
-        //    stateMachine.SwitchState(cootsSM.stompState);
-        //}
-
-        else if (abilityManager.isRoarOffCd && distance <= coots.roarTriggerRange)
-        {
-            stateMachine.SwitchState(cootsSM.roarState);
-        }
-         
-        else if (abilityManager.isPunchOffCd)
-        {
-            stateMachine.SwitchState(cootsSM.punchState);
-        }
-
-        else if (abilityManager.isSwipeOffCd && distance <= coots.swipeTriggerRange)
-        {
-            stateMachine.SwitchState(cootsSM.swipeState);
-        }
     }
 
 }

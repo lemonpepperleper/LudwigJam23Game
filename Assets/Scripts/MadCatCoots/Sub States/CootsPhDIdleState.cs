@@ -29,7 +29,7 @@ public class CootsPhDIdleState : CootsPhDMovementState
     public override void OnUpdate()
     {
         base.OnUpdate();
-        if (cootsSM.hurtBox.currentHP < lastHP)
+        if (distance < cootsSM.cootsData.swipeTriggerRange)
         {
             stateMachine.SwitchState(cootsSM.runState);
         }

@@ -28,6 +28,8 @@ public class CootsAbilityManager : MonoBehaviour
     [HideInInspector]
     public bool isStompDone;
 
+    public bool isCrashOffCd;
+
     [HideInInspector]
     public bool isleapChargeDone;
     [HideInInspector]
@@ -51,6 +53,7 @@ public class CootsAbilityManager : MonoBehaviour
         StartCoroutine(TornadoCoolDown());
         isStompOffCd = false;
         StartCoroutine(StompCoolDown());
+        isCrashOffCd = false;
 
     }
 
@@ -127,6 +130,12 @@ public class CootsAbilityManager : MonoBehaviour
     {
         yield return new WaitForSeconds(coots.roarDuration);
         isRoarDone = true;
+    }
+
+    public IEnumerator CrashCoolDown()
+    {
+        yield return new WaitForSeconds(coots.crashCoolDown);
+        isCrashOffCd = true;
     }
 
     public IEnumerator LeapChargeDone()

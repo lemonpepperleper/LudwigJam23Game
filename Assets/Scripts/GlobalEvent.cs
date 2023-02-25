@@ -20,7 +20,7 @@ public class GlobalEvent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        numOfBoulders = boulderFinalPos.Length;
+        numOfBoulders = 0;
     }
 
     // Update is called once per frame
@@ -35,6 +35,7 @@ public class GlobalEvent : MonoBehaviour
         {
             GameObject boulder = Instantiate(boulderPrefab, boulderStartingPos[i], Quaternion.identity);
             boulder.GetComponent<BoulderController>().SetTarget(boulderFinalPos[i]);
+            numOfBoulders += 1;
         }
     }
 

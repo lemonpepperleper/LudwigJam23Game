@@ -26,6 +26,7 @@ public class PlayerDanceState : PlayerAbilityState
     {
 
         abilityManager.RefillManaBar();
+        abilityManager.RefillHpBar();
     }
 
     public override void OnUpdate()

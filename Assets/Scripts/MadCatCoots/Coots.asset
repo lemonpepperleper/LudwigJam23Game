@@ -17,29 +17,30 @@ MonoBehaviour:
   runRange: 1
   sprintSpeed: 10
   swipeTriggerRange: 3
-  swipeCoolDown: 3
-  swipeDmg: 5
+  swipeCoolDown: 2.5
+  swipeDmg: 10
   punchTriggerRange: 9
-  punchCoolDown: 7
-  punchDmg: 10
+  punchCoolDown: 8
+  punchDmg: 20
   punchDashSpeed: 35
   roarTriggerRange: 3
   roarDuration: 2
   roarTickRate: 0.5
-  roarCoolDown: 10
-  roarDmg: 5
-  tornadoCoolDown: 15
+  roarCoolDown: 8
+  roarDmg: 7.5
+  tornadoCoolDown: 17
   tornadoDuration: 4
   tornadoTickRate: 0.5
   tornadoDmg: 5
   tornadoSpeed: 5
-  stompCoolDown: 10
+  stompCoolDown: 15
   numOfRocks: 5
   rockDmg: 10
+  crashCoolDown: 35
   hpThreshold: 50
   leapChargeTime: 0.75
   leapSpeed: 55
   dashChargeTime: 1.25
   chargeSpeed: 25
-  chargeDmg: 15
+  chargeDmg: 30
   stunnedTime: 0.5

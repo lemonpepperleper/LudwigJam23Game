@@ -20,6 +20,8 @@ public class MadCootsLandedState : MadCootsAbilityState
     public override void OnExit()
     {
         cootsSM.global.DropBoulders();
+        abilityManager.isCrashOffCd = false;
+        abilityManager.StartCoroutine(abilityManager.CrashCoolDown());
     }
 
     public override void OnFixedUpdate()

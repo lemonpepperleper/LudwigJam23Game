@@ -35,12 +35,12 @@ public class MadCootsMovementState : BaseState
     {
         distance = Vector2.Distance(cootsSM.player.position, cootsSM.body.position);
 
-        if (cootsSM.hurtBox.currentHP <= 50f && !cootsSM.enraged)
+        if ((cootsSM.hurtBox.currentHP <= 100f && !cootsSM.enraged) || (cootsSM.enraged && abilityManager.isCrashOffCd))
         {
             stateMachine.SwitchState(cootsSM.leapChargeState);
         }
 
-        if (!abilityManager.isLocked)
+        else if (!abilityManager.isLocked)
         {
             if (abilityManager.isTornadoOffCd)
             {

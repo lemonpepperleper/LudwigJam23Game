@@ -11,7 +11,6 @@ public class MadCootsChargeState : MadCootsAbilityState
     private float num;
     private Vector2 lastPos;
     private float timer;
-    private float threshold;
 
     public MadCootsChargeState(StateMachine stateMachine) : base("Charge", stateMachine)
     {

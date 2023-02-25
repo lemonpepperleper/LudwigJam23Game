@@ -43,6 +43,7 @@ public class CootsData : ScriptableObject
     public float rockDmg = 10f;
 
     [Header("Crash settings")]
+    public float crashCoolDown = 35f;
     public float hpThreshold = 50f;
     public float leapChargeTime = 2.5f;
     public float leapSpeed = 50f;

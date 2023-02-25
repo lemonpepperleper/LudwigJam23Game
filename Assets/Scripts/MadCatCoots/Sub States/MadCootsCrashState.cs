@@ -21,6 +21,8 @@ public class MadCootsCrashState : MadCootsAbilityState
         collider2D.enabled = false;
         cootsSM.body.velocity = Vector2.zero;
         cootsSM.enraged = true;
+        reachedUp = false;
+        reachedDown = false;
     }
 
     public override void OnExit()

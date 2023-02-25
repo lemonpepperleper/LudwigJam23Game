@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAbilityManager : MonoBehaviour
 {
     public PlayerData playerData;
+    public HurtBox hurtBox;
 
     public ResourceBar manaBar;
     public float currentMana;
@@ -45,6 +46,21 @@ public class PlayerAbilityManager : MonoBehaviour
             if (currentMana > playerData.maxMana)
             {
                 currentMana = playerData.maxMana;
+            }
+        }
+
+        //manaBar.SetValue(currentMana);
+    }
+
+    public void RefillHpBar()
+    {
+        if (hurtBox.currentHP < hurtBox.maxHP)
+        {
+            hurtBox.currentHP += playerData.hpRegenRate * Time.fixedDeltaTime;
+
+            if (hurtBox.currentHP > hurtBox.maxHP)
+            {
+                hurtBox.currentHP = hurtBox.maxHP;
             }
         }
 

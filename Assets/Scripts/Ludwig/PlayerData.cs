@@ -10,6 +10,7 @@ public class PlayerData : ScriptableObject
 
     public float maxMana;
     public float manaRegenRate;
+    public float hpRegenRate;
 
     public float dashSpeed;
     public float dashManaCost;

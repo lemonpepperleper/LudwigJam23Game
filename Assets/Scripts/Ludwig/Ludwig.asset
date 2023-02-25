@@ -16,7 +16,8 @@ MonoBehaviour:
   atkDmg: 5
   maxMana: 100
   manaRegenRate: 20
+  hpRegenRate: 10
   dashSpeed: 7.5
-  dashManaCost: 20
+  dashManaCost: 15
   dashTime: 0.1
   dashCooldown: 1

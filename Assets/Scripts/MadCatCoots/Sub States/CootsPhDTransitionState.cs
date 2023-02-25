@@ -34,4 +34,5 @@ public class CootsPhDTransitionState : BaseState
             //stateMachine.SwitchState(cootsSM.rageState);
         }
     }
+
 }

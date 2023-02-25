@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementState : BaseState
 {
@@ -38,6 +39,11 @@ public class PlayerMovementState : BaseState
     public override void OnUpdate()
     {
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+
+        if (playerSM.hurtBox.currentHP <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         if (Input.GetKeyDown(KeyCode.X))
         {

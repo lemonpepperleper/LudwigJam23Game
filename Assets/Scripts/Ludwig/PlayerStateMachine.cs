@@ -13,6 +13,7 @@ public class PlayerStateMachine : StateMachine
     public Rigidbody2D body;
     public Animator animator;
     public PlayerAbilityManager abilityManager;
+    public HurtBox hurtBox;
 
     //public ResourceBar manaBar;
     //private float currentMana;

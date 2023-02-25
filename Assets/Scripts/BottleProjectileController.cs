@@ -19,7 +19,7 @@ public class BottleProjectileController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Rotate(0f, 0f, 180f * Time.fixedDeltaTime);
+        transform.Rotate(0f, 0f, 360f * Time.fixedDeltaTime);
         transform.position += targetDirection * speed * Time.fixedDeltaTime;
     }
 

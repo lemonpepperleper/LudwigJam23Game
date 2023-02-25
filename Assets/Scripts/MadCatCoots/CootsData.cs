@@ -44,4 +44,10 @@ public class CootsData : ScriptableObject
 
     [Header("Crash settings")]
     public float hpThreshold = 50f;
+    public float leapChargeTime = 2.5f;
+    public float leapSpeed = 50f;
+    public float dashChargeTime = 1f;
+    public float chargeSpeed = 35f;
+    public float chargeDmg = 30f;
+    public float stunnedTime = 1f;
 }

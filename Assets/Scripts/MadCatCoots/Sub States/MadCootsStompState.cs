@@ -5,19 +5,39 @@ using UnityEngine;
 public class MadCootsStompState : MadCootsAbilityState
 {
 
+
     public MadCootsStompState(StateMachine stateMachine) : base("Stomp", stateMachine)
     {
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public override void OnEnter()
     {
-        
+        base.OnEnter();
+
+        cootsSM.animator.Play("Stomp");
+        cootsSM.body.velocity = Vector2.zero;
+
+        abilityManager.isStompOffCd = false;
+
+        abilityManager.StartCoroutine(abilityManager.StompCoolDown());
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnExit()
     {
-        
+    }
+
+    public override void OnFixedUpdate()
+    {
+
+    }
+
+    public override void OnUpdate()
+    {
+        base.OnUpdate();
+
+        if (cootsSM.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 3f)
+        {
+            abilityFinished = true;
+        }
     }
 }

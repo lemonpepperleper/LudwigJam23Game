@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360d40a4074d5499bb5609e2a669d2cb, type: 3}
   m_Name: Ludwig
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 8
   atkDmg: 5
   maxMana: 100
-  manaRegenRate: 10
+  manaRegenRate: 20
   dashSpeed: 7.5
   dashManaCost: 20
   dashTime: 0.1
-  dashCooldown: 2
+  dashCooldown: 1

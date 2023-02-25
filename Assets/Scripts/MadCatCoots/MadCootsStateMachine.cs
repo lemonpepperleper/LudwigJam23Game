@@ -13,16 +13,25 @@ public class MadCootsStateMachine : StateMachine
     public MadCootsTornadoEndState tornadoEndState;
     public MadCootsTornadoState tornadoState;
     public MadCootsStompState stompState;
+    public MadCootsCrashState crashState;
+    public MadCootsLeapChargeState leapChargeState;
+    public MadCootsLandedState landedState;
+    public MadCootsChargeState chargeState;
+    public MadCootsDashChargeState dashChargeState;
+    public MadCootsStunnedState stunnedState;
 
     public Rigidbody2D body;
     public Animator animator;
     public CootsAbilityManager abilityManager;
+    public HurtBox hurtBox;
 
     public Transform player;
+    public GlobalEvent global;
 
     public CootsData cootsData;
 
     private bool isFlipped;
+    public bool enraged;
     private void Awake()
     {
         idleState = new MadCootsIdleState(this);
@@ -34,6 +43,13 @@ public class MadCootsStateMachine : StateMachine
         tornadoStartState = new MadCootsTornadoStartState(this);
         tornadoEndState = new MadCootsTornadoEndState(this);
         stompState = new MadCootsStompState(this);
+        crashState = new MadCootsCrashState(this);
+        leapChargeState = new MadCootsLeapChargeState(this);
+        landedState = new MadCootsLandedState(this);
+        chargeState = new MadCootsChargeState(this);
+        dashChargeState = new MadCootsDashChargeState(this);
+        stunnedState = new MadCootsStunnedState(this);
+
     }
 
 

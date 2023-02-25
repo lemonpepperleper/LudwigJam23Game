@@ -35,6 +35,11 @@ public class MadCootsMovementState : BaseState
     {
         distance = Vector2.Distance(cootsSM.player.position, cootsSM.body.position);
 
+        if (cootsSM.hurtBox.currentHP <= 50f && !cootsSM.enraged)
+        {
+            stateMachine.SwitchState(cootsSM.leapChargeState);
+        }
+
         if (!abilityManager.isLocked)
         {
             if (abilityManager.isTornadoOffCd)
@@ -42,10 +47,10 @@ public class MadCootsMovementState : BaseState
                 stateMachine.SwitchState(cootsSM.tornadoStartState);
             }
 
-            //if (abilityManager.isStompOffCd)
-            //{
-            //    stateMachine.SwitchState(cootsSM.stompState);
-            //}
+            else if (abilityManager.isStompOffCd)
+            {
+                stateMachine.SwitchState(cootsSM.stompState);
+            }
 
             else if (abilityManager.isRoarOffCd && distance <= coots.roarTriggerRange)
             {

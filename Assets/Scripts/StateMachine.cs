@@ -41,6 +41,7 @@ public abstract class StateMachine : MonoBehaviour
 
     protected abstract BaseState GetInitialState();
 
+
     private void OnGUI()
     {
         string tooltip = currentState != null ? currentState.name : "no state";

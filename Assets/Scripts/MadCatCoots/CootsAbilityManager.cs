@@ -25,6 +25,18 @@ public class CootsAbilityManager : MonoBehaviour
     public bool isNextTornadoTickReady;
 
     public bool isStompOffCd;
+    [HideInInspector]
+    public bool isStompDone;
+
+    [HideInInspector]
+    public bool isleapChargeDone;
+    [HideInInspector]
+    public bool isDashChargeDone;
+    [HideInInspector]
+    public bool isStunnedDone;
+
+    public GameObject fallingRockPrefab;
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -42,10 +54,13 @@ public class CootsAbilityManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void SpawnFallingRocks()
     {
-        
+        Vector2 pos = player.position;
+        Vector3 spawnPoint = new Vector3(pos.x, 13f, 0f);
+        GameObject obj = Instantiate(fallingRockPrefab, spawnPoint, Quaternion.identity);
+        obj.GetComponent<FallingRockController>().SetTarget(pos);
     }
 
     public IEnumerator AbilityLockCoolDown()
@@ -106,5 +121,29 @@ public class CootsAbilityManager : MonoBehaviour
     {
         yield return new WaitForSeconds(coots.stompCoolDown);
         isStompOffCd = true;
+    }
+
+    public IEnumerator StompDuration()
+    {
+        yield return new WaitForSeconds(coots.roarDuration);
+        isRoarDone = true;
+    }
+
+    public IEnumerator LeapChargeDone()
+    {
+        yield return new WaitForSeconds(coots.leapChargeTime);
+        isleapChargeDone = true;
+    }
+
+    public IEnumerator DashChargeDone()
+    {
+        yield return new WaitForSeconds(coots.dashChargeTime);
+        isDashChargeDone = true;
+    }
+
+    public IEnumerator StunnedDone()
+    {
+        yield return new WaitForSeconds(coots.stunnedTime);
+        isStunnedDone = true;
     }
 }

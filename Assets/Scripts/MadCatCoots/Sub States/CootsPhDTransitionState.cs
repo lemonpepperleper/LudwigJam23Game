@@ -15,6 +15,7 @@ public class CootsPhDTransitionState : BaseState
     {
         cootsSM.animator.Play("Transition");
         cootsSM.body.velocity = Vector2.zero;
+        cootsSM.global.beforeDialogue.TriggerDialogue();
     }
 
     public override void OnExit()
@@ -30,6 +31,8 @@ public class CootsPhDTransitionState : BaseState
         if (cootsSM.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
         {
             cootsSM.global.TurnOffCootsCam();
+            cootsSM.global.afterDialogue.TriggerDialogue();
+
             cootsSM.global.MadCatTransition();
             //stateMachine.SwitchState(cootsSM.rageState);
         }

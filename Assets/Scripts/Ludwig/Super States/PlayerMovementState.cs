@@ -42,7 +42,8 @@ public class PlayerMovementState : BaseState
 
         if (playerSM.hurtBox.currentHP <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            playerSM.gameObject.SetActive(false);
+            DeathScreenManager.instance.ShowDeathScreen();
         }
 
         if (Input.GetKeyDown(KeyCode.X))

@@ -8,7 +8,7 @@ public class LoadMainScene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
         this.enabled = false;
     }
 }

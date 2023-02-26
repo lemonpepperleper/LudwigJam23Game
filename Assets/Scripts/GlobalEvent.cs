@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GlobalEvent : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class GlobalEvent : MonoBehaviour
     public Vector2[] boulderFinalPos;
     public float numOfBoulders;
 
+    public DialogueTrigger beforeDialogue;
+    public DialogueTrigger afterDialogue;
+    //private bool dialogueStarted;
+    public Button button;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +32,10 @@ public class GlobalEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            button.onClick.Invoke();
+        }
     }
 
     public void DropBoulders()

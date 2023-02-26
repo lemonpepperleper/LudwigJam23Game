@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartingSceneEvent : MonoBehaviour
+public class DialogueSceneEvent : MonoBehaviour
 {
     public DialogueTrigger dialogueTrigger;
     public Button button;

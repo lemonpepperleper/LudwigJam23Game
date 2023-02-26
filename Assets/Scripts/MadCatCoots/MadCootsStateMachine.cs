@@ -19,6 +19,7 @@ public class MadCootsStateMachine : StateMachine
     public MadCootsChargeState chargeState;
     public MadCootsDashChargeState dashChargeState;
     public MadCootsStunnedState stunnedState;
+    public MadCootsDeathState deathState;
 
     public Rigidbody2D body;
     public Animator animator;
@@ -49,6 +50,7 @@ public class MadCootsStateMachine : StateMachine
         chargeState = new MadCootsChargeState(this);
         dashChargeState = new MadCootsDashChargeState(this);
         stunnedState = new MadCootsStunnedState(this);
+        deathState = new MadCootsDeathState(this);
 
     }
 

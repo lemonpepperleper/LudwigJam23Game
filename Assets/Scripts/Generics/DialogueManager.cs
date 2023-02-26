@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
 
     public float typingSpeed;
 
+    public bool dialogueEnded;
     private void Start()
     {
         sentences = new Queue<string>();
@@ -24,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue[] dialogues)
     {
         animator.SetBool("isOpen", true);
+        dialogueEnded = false;
         Time.timeScale = 0;
         sentences.Clear();
 
@@ -65,5 +67,6 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("isOpen", false);
         Time.timeScale = 1;
+        dialogueEnded = true;
     }
 }

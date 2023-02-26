@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreenManager : MonoBehaviour
 {
+    public SceneLoader loader;
     public static DeathScreenManager instance;
     public GameObject deathScreen;
 
@@ -26,6 +27,6 @@ public class DeathScreenManager : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        loader.ReloadScene();
     }
 }

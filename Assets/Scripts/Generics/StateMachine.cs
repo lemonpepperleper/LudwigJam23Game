@@ -42,9 +42,4 @@ public abstract class StateMachine : MonoBehaviour
     protected abstract BaseState GetInitialState();
 
 
-    private void OnGUI()
-    {
-        string tooltip = currentState != null ? currentState.name : "no state";
-        GUILayout.Label($"<color='black'><size=40>{tooltip}</size></color>");
-    }
 }

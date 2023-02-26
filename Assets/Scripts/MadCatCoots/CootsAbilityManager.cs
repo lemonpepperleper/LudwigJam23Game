@@ -37,6 +37,9 @@ public class CootsAbilityManager : MonoBehaviour
     [HideInInspector]
     public bool isStunnedDone;
 
+    [HideInInspector]
+    public bool faded;
+    public SpriteRenderer sprite;
     public GameObject fallingRockPrefab;
     public Transform player;
 
@@ -58,12 +61,28 @@ public class CootsAbilityManager : MonoBehaviour
     }
 
 
+
     public void SpawnFallingRocks()
     {
         Vector2 pos = player.position;
         Vector3 spawnPoint = new Vector3(pos.x, 13f, 0f);
         GameObject obj = Instantiate(fallingRockPrefab, spawnPoint, Quaternion.identity);
         obj.GetComponent<FallingRockController>().SetTarget(pos);
+    }
+
+    public IEnumerator FadeAway()
+    {
+        Color startColor = sprite.color;
+        Color endColor = new Color(startColor.r, startColor.g, startColor.b, 0);
+        float time = 0;
+        while (time < 2f)
+        {
+            time += Time.deltaTime;
+            sprite.color = Color.Lerp(startColor, endColor, time / 2f);
+            yield return null;
+        }
+        faded = true;
+
     }
 
     public IEnumerator AbilityLockCoolDown()

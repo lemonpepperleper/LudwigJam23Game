@@ -5,10 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class LoadMainScene : MonoBehaviour
 {
+    public SceneLoader loader;
+    public bool loading;
+
+    private void Start()
+    {
+        loading = false;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
-        this.enabled = false;
+        if (!loading)
+        {
+            loading = true;
+            loader.LoadNextScene();
+        }
     }
 }

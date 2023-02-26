@@ -20,6 +20,7 @@ public class GlobalEvent : MonoBehaviour
 
     public DialogueTrigger beforeDialogue;
     public DialogueTrigger afterDialogue;
+    public DialogueTrigger deadDialogue;
     //private bool dialogueStarted;
     public Button button;
 
